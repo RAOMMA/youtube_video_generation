@@ -1,0 +1,66 @@
+# CineForge is published as CODE ONLY. This file is an allow-list: everything is ignored, and only the
+# pipeline code is let back in. Anything new (a voice, a video, a model) stays private unless added here.
+
+/*
+
+# --- the pipeline (allowed) ---
+!/.gitignore
+!/README.md
+!/SETUP.md
+!/app.py
+!/run.bat
+!/download_ltx.bat
+!/requirements/
+!/cineforge/
+!/voices/
+
+# inside voices/: only the helper scripts, never recordings, samples or tests
+/voices/*
+!/voices/*.py
+/voices/ab_my_voice.py
+
+# --- never commit (explicit, even if a folder above is ever allowed) ---
+outputs/
+projects/
+youtube_uploads*/
+_old_upload_versions/
+venv/
+tts_venv/
+cb_venv/
+tools_venv/
+tools/
+ComfyUI/
+voices/recordings/
+voices/candidates/
+voices/auditions/
+voices/ab_test/
+voices/tests/
+
+# model weights and checkpoints
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.bin
+
+# audio, video and images (voices, renders, art)
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.mp4
+*.mov
+*.mkv
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# python / OS clutter
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+Thumbs.db
